@@ -1,0 +1,51 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <RadioGroup
+        android:id="@+id/radioGroup"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@android:color/darker_gray"
+        android:orientation="horizontal" >
+
+        <RadioButton
+            android:id="@+id/radio_recent_play"
+            style="@style/main_tab_bottom"
+            android:checked="true"
+            android:drawableTop="@drawable/ic_tab_playlists"
+            android:text="最近播放" />
+
+        <RadioButton
+            android:id="@+id/radio_artists"
+            style="@style/main_tab_bottom"
+            android:drawableTop="@drawable/ic_tab_artists"
+            android:text="艺术家" />
+
+        <RadioButton
+            android:id="@+id/radio_albums"
+            style="@style/main_tab_bottom"
+            android:drawableTop="@drawable/ic_tab_albums"
+            android:text="专辑" />
+
+        <RadioButton
+            android:id="@+id/radio_songs"
+            style="@style/main_tab_bottom"
+            android:drawableTop="@drawable/ic_tab_songs"
+            android:text="歌曲" />
+    </RadioGroup>
+
+    <com.example.musicplayer.view.IndexViewPager
+        android:id="@+id/viewPager"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1" >
+    </com.example.musicplayer.view.IndexViewPager>
+
+    <Button
+        android:id="@+id/button_playing"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+</LinearLayout>
